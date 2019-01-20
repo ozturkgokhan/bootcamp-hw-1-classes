@@ -2,25 +2,18 @@ package com.gokhanozturk.bootcamp_hw_1_classes
 
 class Menu: BaseScreen(){
 
-//    private var dishes = ArrayList<String>()
-//
-//    fun addDish(dish: String){
-//        dishes.add(dish)
-//    }
-
     private val dishList = HashMap<String, Dish>()
 
     private fun addCategory(category: String){
         dishList[category] = Dish(category)
     }
 
-    fun addDish(category: String, dish: String){
-        if (!dishList.contains(category)){
-            addCategory(category)
+    fun addDish(dish: Dish){
+        if (!dishList.contains(dish.category)){
+            addCategory(dish.category!!)
         }
 
-        dishList[category]?.addDish(dish)
-
+        dishList[dish.category]?.addDish(dish)
     }
 
     fun listMenuCategories(){

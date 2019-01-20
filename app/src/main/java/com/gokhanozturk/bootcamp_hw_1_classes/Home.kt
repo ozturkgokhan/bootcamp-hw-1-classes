@@ -8,11 +8,23 @@ class Home: BaseScreen("Home"){
 
         // Generate a menu for the Republique restaurant
         val menuRepublique = Menu()
-        menuRepublique.addDish("Pasta", "Bucatini")
-        menuRepublique.addDish("Pasta", "Mafaldine")
-        menuRepublique.addDish("Fish", "Shark Tail")
-        menuRepublique.addDish("Fish", "Solmon")
-        menuRepublique.addDish("Pasta", "Shrimp Crackers")
+        val bucatini = Dish("Pasta", "Bucatini", 10.45, "Bucatini description")
+        val mafaldine = Dish("Pasta", "Mafaldine", 6.55, "Mafaldine description")
+        val sharkTail = Dish("Fish", "Shark Tail", 12.45, "Shark Tail description")
+        val solmon = Dish("Fish", "Solmon", 8.45, "Solmon description")
+        val shrimpCracker = Dish("Fish", "Shrimp Crackers", 5.50, "Shrimp Crackers description")
+
+        menuRepublique.addDish(bucatini)
+        menuRepublique.addDish(mafaldine)
+        menuRepublique.addDish(sharkTail)
+        menuRepublique.addDish(solmon)
+        menuRepublique.addDish(shrimpCracker)
+
+//        menuRepublique.addDish("Pasta", "Bucatini")
+//        menuRepublique.addDish("Pasta", "Mafaldine")
+//        menuRepublique.addDish("Fish", "Shark Tail")
+//        menuRepublique.addDish("Fish", "Solmon")
+//        menuRepublique.addDish("Pasta", "Shrimp Crackers")
 
         // init Republique restaurant with the menu
         val republique = Restaurant("RP-thumbnail.png",
@@ -20,22 +32,22 @@ class Home: BaseScreen("Home"){
 
 
         // Generate a menu for the Ocean Seafood restaurant
-        val menuOceanSeafood = Menu()
-        menuOceanSeafood.addDish("Appetizers", "Crispy Egg Roll")
-        menuOceanSeafood.addDish("Fish", "Crispy Shrimp")
-        menuOceanSeafood.addDish("Fish", "Shark Tail")
-        menuOceanSeafood.addDish("Fish", "Solmon")
-        menuOceanSeafood.addDish("Soup", "New England")
-        menuOceanSeafood.addDish("Soup", "Cioppino")
+//        val menuOceanSeafood = Menu()
+//        menuOceanSeafood.addDish("Appetizers", "Crispy Egg Roll")
+//        menuOceanSeafood.addDish("Fish", "Crispy Shrimp")
+//        menuOceanSeafood.addDish("Fish", "Shark Tail")
+//        menuOceanSeafood.addDish("Fish", "Solmon")
+//        menuOceanSeafood.addDish("Soup", "New England")
+//        menuOceanSeafood.addDish("Soup", "Cioppino")
 
         // init Ocean Seafood restaurant with the menu
-        val oceanSeafood = Restaurant("OS-thumbnail.png",
-            "OS.png", "Ocean Seafood", "750 N Hill St, LA, CA", "213-687-3088", menuOceanSeafood)
+        //val oceanSeafood = Restaurant("OS-thumbnail.png",
+            //"OS.png", "Ocean Seafood", "750 N Hill St, LA, CA", "213-687-3088", menuOceanSeafood)
 
 
 
         restaurants.add(republique)
-        restaurants.add(oceanSeafood)
+        //restaurants.add(oceanSeafood)
 
         println("\n*** Restaurants ***")
         for (restaurant in restaurants){
